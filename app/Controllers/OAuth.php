@@ -16,7 +16,7 @@ class OAuth extends BaseController
         $this->authModel = new AuthModel();
     }
 
-    public function index()
+    public function login()
     {
         //return view('welcome_message');
         if ($this->baseCekLogin() == true)
