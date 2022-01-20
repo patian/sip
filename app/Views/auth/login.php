@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Log in - Sistem Informasi Penjualan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>/favicon.ico">
   <link rel="stylesheet" href="<?php echo base_url('themes/plugins'); ?>/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="<?php echo base_url('themes/dist1'); ?>/css/adminlte.min.css">
 </head>
