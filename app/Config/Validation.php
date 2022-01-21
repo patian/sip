@@ -40,4 +40,19 @@ class Validation
     //--------------------------------------------------------------------
     // Rules
     //--------------------------------------------------------------------
+    
+    public $authlogin = [
+        'email'     => 'required|valid_email',
+        'password'  => 'required',
+    ];
+
+    public $authlogin_errors = [
+        'email'     => [
+            'required'      => 'Email wajib diisi',
+            'valid_email'   => 'Email tidak valid',
+        ],
+        'password'  => [
+            'required'      => 'Password wajib diisi',
+        ],
+    ];
 }
