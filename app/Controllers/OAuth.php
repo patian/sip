@@ -26,4 +26,15 @@ class OAuth extends BaseController
 
         echo view('auth/login');
     }
+
+    public function register()
+    {
+        //return view('welcome_message');
+        if ($this->baseCekLogin() == true)
+        {
+            return redirect()->to('/dashboard');
+        }
+
+        echo view('auth/register');
+    }
 }
