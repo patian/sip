@@ -38,6 +38,7 @@ $routes->get('auth/login', 'OAuth::login');
 $routes->post('auth/proses_login', 'OAuth::proses_login');
 
 $routes->get('auth/register', 'OAuth::register');
+$routes->post('auth/proses_register', 'OAuth::proses_register');
 
 $routes->get('auth/logout', 'OAuth::logout');
 

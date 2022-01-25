@@ -12,7 +12,7 @@
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="<?php echo base_url('auth/login'); ?>"><b>SIP</b>Online</a>
+      <a href="<?php echo base_url('auth/login'); ?>"><b>SIP</b>Online </a>
     </div>
     <div class="card">
       <div class="card-body login-card-body">

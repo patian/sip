@@ -42,7 +42,7 @@ class OAuth extends BaseController
         if ($validation->run($data, 'authlogin') == false)
         {
             session()->setFlashdata('errors', $validation->getErrors());
-            return redirect()->to('/pages/auth/login');
+            return redirect()->to('/auth/login');
         }
         else
         {
@@ -62,13 +62,13 @@ class OAuth extends BaseController
                 else
                 {
                     session()->setFlashdata('errors', ['' => 'Username atau Password yang masukkan salah']);
-                    return redirect()->to('/pages/auth/login');
+                    return redirect()->to('/auth/login');
                 }
             }
             else
             {
                 session()->setFlashdata('errors', ['' => 'Username tidak terdaftar']);
-                return redirect()->to('/pages/auth/login');
+                return redirect()->to('/auth/login');
             }
         }
     }
@@ -82,6 +82,45 @@ class OAuth extends BaseController
         }
 
         echo view('pages/auth/register');
+    }
+
+    public function proses_register()
+    {
+        $validation = \Config\Services::validation();
+
+        $data = [
+            'email'             => $this->request->getPost('email'),
+            'name'              => $this->request->getPost('name'),
+            'username'          => $this->request->getPost('username'),
+            'password'          => $this->request->getPost('password'),
+            'confirm_password'  => $this->request->getPost('confirm_password'),
+        ];
+
+        if ($validation->run($data, 'authregister') == false)
+        {
+            session()->setFlashdata('errors', $validation->getErrors());
+            session()->setFlashdata('inputs', $this->request->getPost());
+            return redirect()->to('/auth/register');
+        }
+        else
+        {
+            $datalagi = [
+                'email'     => $this->request->getPost('email'),
+                'name'      => $this->request->getPost('name'),
+                'username'  => $this->request->getPost('username'),
+                'password'  => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+                'status'    => "Active",
+                'level'     => "Admin",
+            ];
+
+            $simpan = $this->authModel->register($datalagi);
+
+            if ($simpan)
+            {
+                session()->setFlashdata('success_register', 'Register Successfully');
+                return redirect()->to('/auth/login');
+            }
+        }
     }
 
     public function logout()
