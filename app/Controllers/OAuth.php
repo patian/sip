@@ -83,4 +83,10 @@ class OAuth extends BaseController
 
         echo view('pages/auth/register');
     }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/auth/login');
+    }
 }
