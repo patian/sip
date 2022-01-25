@@ -35,8 +35,11 @@ $routes->setAutoRoute(true);
 
 $routes->get('/', 'OAuth::login');
 $routes->get('auth/login', 'OAuth::login');
+$routes->post('auth/proses_login', 'OAuth::proses_login');
 
 $routes->get('auth/register', 'OAuth::register');
+
+$routes->get('dashboard', 'Dashboard::index');
 
 /*
  * --------------------------------------------------------------------

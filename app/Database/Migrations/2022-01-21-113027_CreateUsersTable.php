@@ -33,13 +33,11 @@ class CreateUsersTable extends Migration
                 'constraint'    => '255',
             ],
             'status'    => [
-                'type'          => 'ENUM',
-                'constraint'    => "'Active','Inactive'",
+                'type'          => 'status',
                 'default'       => 'Active',
             ],
             'level'     => [
-                'type'          => 'ENUM',
-                'constraint'    => "'Admin','User'",
+                'type'          => 'level',
                 'default'       => 'Admin',
             ],
         ]);

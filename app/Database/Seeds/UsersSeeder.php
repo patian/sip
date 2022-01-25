@@ -17,5 +17,7 @@ class UsersSeeder extends Seeder
             'status'    => 'Active',
             'level'     => 'Admin',
         ];
+        
+        $this->db->table('users')->insert($data);
     }
 }

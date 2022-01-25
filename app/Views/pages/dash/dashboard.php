@@ -1,5 +1,5 @@
-<?php echo view('dash_partials/header'); ?>
-<?php echo view('dash_partials/sidebar'); ?>
+<?php echo view('components/dash_partials/header'); ?>
+<?php echo view('components/dash_partials/sidebar'); ?>
  
 <div class="content-wrapper">
     <div class="content-header">
@@ -102,14 +102,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($latest_trx as $key => $row){ ?>
-                                        <tr>
-                                            <td><?php echo $key + 1; ?></td>
-                                            <td><?php echo $row['product_name']; ?></td>
-                                            <td><?php echo date('j F Y', strtotime($row['trx_date'])); ?></td>
-                                            <td><?php echo "Rp. ".number_format($row['trx_price'], false, false, "."); ?></td>
-                                        </tr>
-                                        <?php } ?>
+                                        
                                     </tbody>
                                 </table>
                             </div>

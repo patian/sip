@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>/favicon.ico">
   <link rel="stylesheet" href="<?php echo base_url('themes/plugins'); ?>/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="<?php echo base_url('themes/dist'); ?>/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('themes/dist1'); ?>/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
   <div class="login-box">
@@ -142,6 +142,6 @@
   </div>
 <script src="<?php echo base_url('themes/plugins'); ?>/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url('themes/plugins'); ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo base_url('themes/dist'); ?>/js/adminlte.min.js"></script>
+<script src="<?php echo base_url('themes/dist1'); ?>/js/adminlte.min.js"></script>
 </body>
 </html>
