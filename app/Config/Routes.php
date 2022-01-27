@@ -44,6 +44,17 @@ $routes->get('auth/logout', 'OAuth::logout');
 
 $routes->get('dashboard', 'Dashboard::index');
 
+//Categories
+$routes->get('category', 'Category::index');
+$routes->get('category/create', 'Category::create');
+$routes->get('category/store', 'Category::store');
+$routes->get('category/edit', 'Category::edit');
+$routes->get('category/delete', 'Category::delete');
+
+//Products
+$routes->get('product', 'Product::index');
+$routes->get('product/create', 'Product::create');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

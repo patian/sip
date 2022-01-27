@@ -97,4 +97,62 @@ class Validation
 			'max_length'    => 'Konfirmasi password maksimal 35 karakter'
 		]
 	];
+
+    public $category = [
+        'category_name'     => 'required',
+        'category_status'   => 'required',
+    ];
+
+    public $category_errors = [
+        'category_name'     => [
+            'required'  => 'Nama kategori wajib diisi',
+        ],
+        'category_status'   => [
+            'required'  => 'Status kategori wajib diisi',
+        ],
+    ];
+
+    public $product = [
+        'fk_category_id'           => 'required',
+		'product_name'          => 'required',
+		'product_price_base'    => 'required',
+        'product_price_sell'    => 'required',
+		'product_sku'           => 'required',
+        'product_stok'          => 'required',
+		'product_status'        => 'required',
+		'product_image'         => 'uploaded[product_image]|mime_in[product_image,image/jpg,image/jpeg,image/gif,image/png]|max_size[product_image,1000]',
+		'product_description'   => 'required'
+    ];
+
+    public $product_errors = [
+		'fk_category_id'   => [
+			'required'  => 'Nama category wajib diisi.',
+		],
+		'product_name'  => [
+			'required'  => 'Nama product wajib diisi.'
+		],
+		'product_price_base' => [
+			'required'  => 'Harga modal product wajib diisi.'
+		],
+        'product_price_sell' => [
+			'required'  => 'Harga jual product wajib diisi.'
+		],
+		'product_sku'   => [
+			'required'  => 'Kode product wajib diisi.'
+		],
+        'product_stok'   => [
+			'required'  => 'Stok product wajib diisi.'
+		],
+		'product_status'=> [
+			'required'  => 'Status product wajib diisi.'
+		],
+		'product_image'=> [
+			'mime_in'   => 'Gambar product hanya boleh diisi dengan jpg, jpeg, png atau gif.',
+			'max_size'  => 'Gambar product maksimal 1mb',
+			'uploaded'  => 'Gambar product wajib diisi'
+		],
+		'product_description'   => [
+			'required'          => 'Description product wajib diisi.'
+		]
+	];
 }

@@ -22,8 +22,8 @@ foreach($grafik as $data){
 </div>
 <script src="<?php echo base_url('themes/plugins'); ?>/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url('themes/plugins'); ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo base_url('themes/dist'); ?>/js/adminlte.min.js"></script>
-<script src="<?php echo base_url('themes/dist'); ?>/js/filter.js"></script>
+<script src="<?php echo base_url('themes/dist1'); ?>/js/adminlte.min.js"></script>
+<script src="<?php echo base_url('themes/dist1'); ?>/js/filter.js"></script>
 <?php if(isset($grafik)){?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 <script>

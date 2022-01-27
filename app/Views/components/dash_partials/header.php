@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -8,8 +9,6 @@
     <link rel="stylesheet" href="<?php echo base_url('themes/dist1'); ?>/css/adminlte.min.css">
     <link rel="stylesheet" href="<?php echo base_url('themes/plugins'); ?>/fontawesome-free/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <script type="text/javascript"  id="debugbar_dynamic_script"></script>
-    <script type="text/javascript"  id="debugbar_loader" data-time="1585277113" src="<?php echo base_url('themes/plugins/'); ?>/index.php?debugbar"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">

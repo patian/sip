@@ -2,14 +2,14 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
+use App\Models\DashboardModel;
 
 class Dashboard extends BaseController
 {
     public function __construct()
     {
         $this->base_cek_login();
-        //$this->dashboard_model = new DashboardModel();
+        $this->dashboardModel = new DashboardModel();
     }
 
     public function index()
@@ -22,8 +22,8 @@ class Dashboard extends BaseController
 
         $data['total_transaction']  = "";
         $data['total_product']      = "";
-        $data['total_category']     = "";
-        $data['total_user']         = "";
+        $data['total_category']     = $this->dashboardModel->getCountCategory();
+        $data['total_user']         = $this->dashboardModel->getCountUser();
         $data['latest_trx']         = "{}";
 
         
